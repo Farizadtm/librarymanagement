@@ -33,11 +33,11 @@ func main() {
 	}
 
 	psqlInfo := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
-		os.Getenv("DBHOST"),
-		os.Getenv("DBPORT"),
-		os.Getenv("DBUSER"),
-		os.Getenv("DBPASSWORD"),
-		os.Getenv("DBNAME"))
+		os.Getenv("PGHOST"),
+		os.Getenv("PGPORT"),
+		os.Getenv("PGUSER"),
+		os.Getenv("PGPASSWORD"),
+		os.Getenv("PGDATABASE"))
 
 	DB, err = sql.Open("postgres", psqlInfo)
 	err = DB.Ping()
